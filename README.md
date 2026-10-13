@@ -1,3 +1,5 @@
+****NOTA: Verificar evidencias en la carpeta EVIDENCIAS dentro del repositorio
+
 Cómo ejecutar el proyecto:
 
 1. Clonar o descargar los archivos de repositorio
@@ -11,3 +13,4 @@ Funcionalidades
 - En la pantalla de chats, hay un componente que respresenta cada chat activo, duplicado para poder hacerlo de forma más efectiva
 
 - En el laboratorio, hay un contador que usa setState para poder modificar el texto con los botones
+

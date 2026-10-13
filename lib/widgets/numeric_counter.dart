@@ -17,7 +17,7 @@ class _ContadorState extends State<Contador> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('Cantidad',
+        const Text('Cuántos contactos quieres bloquear',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         const SizedBox(height: 20),
 
