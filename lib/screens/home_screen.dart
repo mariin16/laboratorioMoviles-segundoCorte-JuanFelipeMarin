@@ -11,15 +11,15 @@ class HomeScreen extends StatelessWidget {
     return ListView( 
       children: const [
         MiBanner(
-          titulo: 'Bienvenido',
-          descripcion: 'A mi app xd',
+          titulo: 'Estados',
+          descripcion: 'Mira lo que estan haciendo tus contactos',
         ),
         SizedBox(height: 10),
         Carrusel(),
         SizedBox(height: 10),
 
-        PostCard(usuario: '@hola123', descripcion: 'hola a todos 123123123'),
-        PostCard(usuario: '@usuariooo', descripcion: 'este es un post aaa'),
+        PostCard(usuario: '@mariaaaaa', descripcion: 'hola a todos 123123123'),
+        PostCard(usuario: '@diegogamer123', descripcion: 'este es un post aaa'),
       ],
     );
   }

@@ -14,11 +14,11 @@ class MiBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10),
+      
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Colors.blue,
-        borderRadius: BorderRadius.circular(8),
+        color: const Color.fromARGB(255, 104, 208, 128),
+        
       ),
       child: Row(
         children: [
@@ -38,7 +38,7 @@ class MiBanner extends StatelessWidget {
               ],
             ),
           ),
-          const Icon(Icons.person, color: Colors.white, size: 40),
+          const Icon(Icons.phone_enabled, color: Colors.white, size: 40),
         ],
       ),
     );

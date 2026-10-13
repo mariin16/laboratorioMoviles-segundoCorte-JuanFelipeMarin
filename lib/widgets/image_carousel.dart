@@ -6,17 +6,35 @@ class Carrusel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
+      height: 120,
       child: ListView(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 10),
         children: const [
-          Tarjeta(texto: '1', color: Color.fromARGB(255, 254, 43, 28)),
-          Tarjeta(texto: '2', color: Color.fromARGB(255, 153, 26, 176)),
-          Tarjeta(texto: '3', color: Color.fromARGB(255, 2, 196, 176)),
-          Tarjeta(texto: '4', color: Color.fromARGB(255, 64, 165, 67)),
-          Tarjeta(texto: '5', color: Color.fromARGB(255, 192, 239, 38)),
-          Tarjeta(texto: '6', color: Color.fromARGB(255, 225, 27, 126)),
+          Tarjeta(
+            nombre: 'Ana',
+            foto: 'https://picsum.photos/200',
+          ),
+          Tarjeta(
+            nombre: 'Luis',
+            foto: 'https://picsum.photos/200',
+          ),
+          Tarjeta(
+            nombre: 'Maria',
+            foto: 'https://picsum.photos/200',
+          ),
+          Tarjeta(
+            nombre: 'Carlos',
+            foto: 'https://picsum.photos/200',
+          ),
+          Tarjeta(
+            nombre: 'Sofia',
+            foto: 'https://picsum.photos/200',
+          ),
+          Tarjeta(
+            nombre: 'Diego',
+            foto: 'https://picsum.photos/200',
+          ),
         ],
       ),
     );
@@ -24,22 +42,26 @@ class Carrusel extends StatelessWidget {
 }
 
 class Tarjeta extends StatelessWidget {
-  final String texto;
-  final Color color;
+  final String nombre;
+  final String foto;
 
-  const Tarjeta({super.key, required this.texto, required this.color});
+  const Tarjeta({super.key, required this.nombre, required this.foto});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      margin: const EdgeInsets.all(5),
-      color: color,
-      alignment: Alignment.center,
-      child: Text(
-        texto,
-        style: const TextStyle(
-            color: Colors.white, fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 40,
+            backgroundImage: NetworkImage(foto),
+          ),
+          const SizedBox(height: 5),
+
+      
+          Text(nombre, style: const TextStyle(fontSize: 12)),
+        ],
       ),
     );
   }

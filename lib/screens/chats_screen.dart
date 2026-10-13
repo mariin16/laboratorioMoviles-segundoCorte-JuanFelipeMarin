@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/chat_tile.dart';
+import '../widgets/banner.dart';
 
 class ChatsScreen extends StatelessWidget {
   const ChatsScreen({super.key});
@@ -7,13 +8,18 @@ class ChatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView( 
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      
       children: const [
-        ChatTile(nombre: 'Usuario 1', mensaje: 'Hola'),
-        ChatTile(nombre: 'Usuario 2', mensaje: 'Chau'),
-        ChatTile(nombre: 'Usuario 3', mensaje: 'Nos vemos'),
-        ChatTile(nombre: 'Usuario 4', mensaje: 'Gracias'),
-        ChatTile(nombre: 'Usuario 5', mensaje: 'OK'),
+        MiBanner(
+          titulo: 'Chats',
+          descripcion: 'Habla con quien sea',
+        ),
+        ChatTile(nombre: 'Ana', mensaje: 'Hola'),
+        ChatTile(nombre: 'Luis', mensaje: 'Chau'),
+        ChatTile(nombre: 'Maria', mensaje: 'pasame la tarea xd'),
+        ChatTile(nombre: 'Carlos', mensaje: 'Gracias'),
+        ChatTile(nombre: 'Sofia', mensaje: 'OK'),
+         ChatTile(nombre: 'Diego ', mensaje: 'hola linda'),
       ],
     );
   }

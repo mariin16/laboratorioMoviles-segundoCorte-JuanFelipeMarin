@@ -26,8 +26,8 @@ class ChatTile extends StatelessWidget {
       child: Row(
         children: [
           const CircleAvatar(
-            backgroundColor: Colors.blue,
-            child: Icon(Icons.person, color: Colors.white),
+            backgroundColor:Color.fromARGB(255, 43, 119, 61) ,
+            backgroundImage: NetworkImage('https://picsum.photos/200'),
           ),
           const SizedBox(width: 10),
 
