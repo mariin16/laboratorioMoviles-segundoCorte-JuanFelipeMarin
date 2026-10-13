@@ -1,5 +1,10 @@
 ****NOTA: Verificar evidencias en la carpeta EVIDENCIAS dentro del repositorio
 
+Aplicación de mensajería - Laboratorio móviles
+
+Esta aplicación es una recreación de una app de mensajes, con secciones como chat y estados, con una Bottom Bar funcional que cambia la pantalla según el clic, y con botones de Like funcionales en la pantalla inicial.
+
+
 Cómo ejecutar el proyecto:
 
 1. Clonar o descargar los archivos de repositorio
