@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PostCard extends StatelessWidget {
+class PostCard extends StatefulWidget {
   final String usuario;
   final String descripcion;
 
@@ -11,13 +11,20 @@ class PostCard extends StatelessWidget {
   });
 
   @override
+  State<PostCard> createState() => _PostCardState();
+}
+
+class _PostCardState extends State<PostCard> {
+  // Variable que indica si el botón fue presionado.
+  bool _presionado = false;
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
-        
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,11 +32,11 @@ class PostCard extends StatelessWidget {
           Row(
             children: [
               const CircleAvatar(
-                backgroundColor:  Color.fromARGB(255, 104, 208, 128),
+                backgroundColor: Color.fromARGB(255, 104, 208, 128),
                 child: Icon(Icons.person, color: Colors.white),
               ),
               const SizedBox(width: 10),
-              Text(usuario,
+              Text(widget.usuario,
                   style: const TextStyle(fontWeight: FontWeight.bold)),
             ],
           ),
@@ -43,19 +50,31 @@ class PostCard extends StatelessWidget {
           ),
           const SizedBox(height: 10),
 
-          Text(descripcion),
+          Text(widget.descripcion),
           const SizedBox(height: 5),
 
           Row(
             children: [
+              // Botón que cambia de color al presionar.
               TextButton.icon(
-                onPressed: () {},
-                icon: const Icon(Icons.favorite_border, color:Color.fromARGB(255, 43, 119, 61) ),
+                onPressed: () {
+                  setState(() {
+                    _presionado = !_presionado;
+                  });
+                },
+                icon: Icon(
+                  _presionado ? Icons.favorite : Icons.favorite_border,
+                  color: _presionado
+                      ? Colors.red
+                      : const Color.fromARGB(255, 43, 119, 61),
+                ),
                 label: const Text(''),
               ),
+
               TextButton.icon(
                 onPressed: () {},
-                icon: const Icon(Icons.comment, color:Color.fromARGB(255, 43, 119, 61) ),
+                icon: const Icon(Icons.comment,
+                    color: Color.fromARGB(255, 43, 119, 61)),
                 label: const Text(''),
               ),
             ],
